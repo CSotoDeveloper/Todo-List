@@ -1,0 +1,139 @@
+.app__inputs {
+  margin-top: 10px;
+}
+
+.app__input {
+  background-color: #DDF2FD;
+  border-radius: 20px;
+  border: 1px solid #DDF2FD;
+  height: 40px;
+  width: 400px;
+  padding-left: 10px;
+  color: #164863;
+  font-weight: 600;
+}
+.app__input:focus {
+  border: 2px solid white;
+  outline: none;
+}
+.app__input::placeholder {
+  color: #164863;
+  text-align: left;
+}
+.app__input::selection {
+  background-color: #427D9D;
+}
+
+.app__btn_add {
+  background-color: #164863;
+  border-radius: 20px;
+  color: white;
+  height: 40px;
+  width: 45px;
+  margin-left: -25px;
+  cursor: pointer;
+}
+.app__btn_add:hover {
+  color: #DDF2FD;
+}
+
+body {
+  background-color: #9BBEC8;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  border: 5px solid #DDF2FD;
+  margin-top: 50px;
+  padding: 10px;
+  padding-bottom: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+.app h1 {
+  color: #164863;
+  font-weight: bold;
+  text-align: center;
+}
+.app__icon {
+  padding-top: 10px;
+  color: #164863;
+}
+.app__inputs {
+  display: flex;
+}
+.app__tasks-created {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  gap: 10px;
+  border: 1px solid #DDF2FD;
+  margin: 5px;
+  padding: 5px;
+}
+.app__tasks-created span {
+  min-width: 350px;
+  max-width: 350px;
+}
+.app__tasks ul li {
+  cursor: pointer;
+  padding: 12px 8px 12px 40px;
+  user-select: none;
+  position: relative;
+}
+.app__tasks ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #9BBEC8;
+  left: 12px;
+}
+.app__tasks ul li.checked {
+  color: #427D9D;
+  text-decoration: line-through;
+}
+.app__tasks ul li.checked::before {
+  background-color: #427D9D;
+  border: 1px solid #9BBEC8;
+}
+.app__tasks ul li span {
+  position: absolute;
+  right: -15px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  color: #9BBEC8;
+  text-align: center;
+  line-height: 30px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.app__tasks ul li span:hover {
+  border-radius: 50%;
+  background-color: #DDF2FD;
+}
+
+.emptyInput {
+  margin-top: 4px;
+  color: red;
+  margin-left: 13px;
+}
+
+.taskCreated {
+  color: black;
+  max-width: 400px;
+  overflow-wrap: anywhere;
+}
+
+.copyright {
+  color: white;
+  text-align: center;
+}
+
+/*# sourceMappingURL=global.css.map */

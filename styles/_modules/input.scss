@@ -1,0 +1,40 @@
+@import '../_base/variables.scss';
+
+.app__inputs{
+    margin-top: 10px;
+}
+
+.app__input {
+    background-color: $borderColor;
+    border-radius: 20px;
+    border: 1px solid $borderColor;
+    height: 40px;
+    width: 400px;
+    padding-left: 10px;
+    color: $primaryColor;
+    font-weight:600;
+        &:focus{
+            border: 2px solid white;
+            outline: none;
+        }
+        &::placeholder{
+            color: $primaryColor;
+            text-align: left;
+        }
+        &::selection{
+            background-color: $secondaryColor;
+        }
+}
+.app__btn_add {
+    background-color: $primaryColor;
+    border-radius: 20px;
+    color: white;
+    height: 40px;
+    width: 45px;
+    margin-left: -25px;
+    cursor: pointer;
+    &:hover{
+       color: $borderColor;
+       
+    }
+}

@@ -1,0 +1,97 @@
+/*Reset de margins y paddings*/
+:root{
+    --color-primario: #181818;
+    --color-secundario: #f0f0f0;
+    --tipo-principal: Helvetica, Arial, sans-serif;
+    --tipo-secundaria: Verdana
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --color-primario: #f0f0f0;
+        --color-secundario: #181818;
+    }
+}
+
+@media (prefers-contrast: high){
+    :root{
+        --color-primario: black;
+        --color-secundario: white;
+    }
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+img, picture, video, iframe, figure {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+a {
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em{
+     font-size: 1em;
+     font-weight: inherit;
+     font-style: inherit;
+     text-decoration: none;
+     color: inherit;
+} 
+
+blockquote::before, blockquote::after, q:before, q:after{
+    content: '';
+    content: none;
+}
+
+::selection{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+
+form, input, textarea, select, button, label{
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    display: block;
+    color: inherit;
+}
+
+table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    line-height: 1.4em;
+    font-family: var(--tipo-principal);
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    
+}

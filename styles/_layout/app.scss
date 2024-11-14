@@ -1,0 +1,110 @@
+@import '../_base/variables.scss';
+
+body{
+    background-color: $bgColor;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.app{
+    border: 5px solid $borderColor;
+    margin-top: 50px;
+    padding: 10px;
+    padding-bottom: 50px;
+    background-color: white;
+    border-radius: 10px;
+    h1{
+        color: $primaryColor;
+        font-weight: bold;
+        text-align: center;
+    }
+    &__icon{
+        padding-top: 10px;
+        color: $primaryColor;
+    }
+    &__inputs{
+        display: flex;
+    }
+ 
+    &__tasks{
+        &-created{
+            display: flex; 
+            align-items: center; /* Alinea verticalmente los elementos en el centro */
+            gap: 10px;
+            border: 1px solid $borderColor; 
+            margin: 5px; 
+            padding: 5px;
+            
+            span{
+                min-width: 350px;
+                max-width: 350px;
+                
+            }
+        }
+        ul li {
+            cursor: pointer;
+            padding: 12px 8px 12px 40px;
+            user-select: none;
+            position: relative;
+            
+            &::before{
+                content: '';
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                border: 1px solid $bgColor;
+                left: 12px;
+            }
+            &.checked{
+                color: $secondaryColor;
+                text-decoration: line-through;
+                &::before{
+                    background-color: $secondaryColor;
+                    border: 1px solid $bgColor;
+                }
+            }
+            span{
+                position: absolute;
+                right: -15px;
+                top: 5px;
+                width: 30px;
+                height: 30px;
+                color: $bgColor;
+                text-align: center;
+                line-height: 30px;
+                word-break: break-word;
+                overflow-wrap: break-word ;
+                
+                &:hover{
+                    border-radius: 50%;
+                    background-color: $borderColor;
+                }
+            }
+        }
+    }
+
+
+}
+
+.emptyInput{
+    margin-top: 4px;
+    color: red;
+    margin-left: 13px;
+}
+
+.taskCreated{
+    max-width: 400px;
+    overflow-wrap:anywhere;
+}
+
+
+.copyright{
+    
+    color: white;
+    text-align: center;
+}
